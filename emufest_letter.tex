@@ -1,0 +1,93 @@
+\documentclass[]{letter}
+\usepackage[a4paper]{geometry}
+
+\usepackage{mwe,tikz}
+
+\usepackage{color}
+
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Source Sans Pro}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Source Sans Pro}
+\setmonofont[]{Source Code Pro}
+
+\newfontfamily{\svolk}{Volkhov}
+\usepackage[italian, english]{babel}
+
+\linespread{1.2}
+
+\usepackage{lipsum}
+
+\definecolor{supercolor}{RGB}{3,39,36}
+
+\topmargin -2.01in
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	DATE AND FROM ADDRESS
+%----------------------------------------------------------------------------------------
+
+\date{\begin{flushleft}\today\end{flushleft}}
+
+\begin{letter}{\large \bfseries First last name \\ Address \\ Code, City}
+
+%----------------------------------------------------------------------------------------
+%	HEADING BOX
+%----------------------------------------------------------------------------------------
+
+\colorbox{supercolor}{
+
+\parbox[t]{\linewidth}{
+
+\centering
+   
+\vspace*{14pt} % Whitespace above the text
+
+\centering \color{white} \huge \svolk{NOTICE OF SELECTION}
+
+\vspace*{14pt} % Whitespace below the text
+}}
+
+%----------------------------------------------------------------------------------------
+%	FOOTER BOX
+%----------------------------------------------------------------------------------------
+
+\parbox[t]{\linewidth}{
+\centering
+\begin{tikzpicture}[overlay]
+     \node at (0,-24.8) {\includegraphics[scale=.325]{emufest2015motto}};
+     \node at (0,-21) {\includegraphics[scale=0.25]{E_site-logo_tondo}};
+  \end{tikzpicture}}
+
+%----------------------------------------------------------------------------------------
+%	SIGNATURE
+%----------------------------------------------------------------------------------------
+
+\signature{
+Festival COORDINATORS \\
+\textbf{Michelangelo LUPONE} \\
+\textbf{Nicola BERNARDINI} \\
+\textsc{Conservatorio S. Cecilia} \\
+\small{emufest.org}
+}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\opening{Dear Sir,}
+
+\begin{quotation}
+
+\lipsum[4]\vspace{10pt}\lipsum[5]
+
+\end{quotation}
+
+\closing{Sincerely,}
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+
+\end{document}
